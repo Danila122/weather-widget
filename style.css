@@ -1,0 +1,170 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul,
+ol {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  overflow: hidden;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul,
+ol {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+
+.weather-widget{
+  width: 400px;
+  background-color: #00bfff;
+  position: absolute;
+  top: 10px;
+  right: -400px;
+  min-height: 350px;
+  transition: all 1s
+}
+
+.weather-widget.active{
+  right: 0;
+}
+
+.weather-widget__close{
+  position: absolute;
+  top: 100px;
+  left: -35px;
+  width: 35px;
+  height: 70px;
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 25px;
+}
+
+.weather-widget__info{
+  font-size: 20px;
+  padding: 15px;
+}
+
+.info {
+  color: white;
+}
+
+.info__title {
+  text-align: left;
+  margin: 0px 0px 20px 0px;
+  font-size: 40px;
+}
+
+.info__town {
+  margin: 0px 0px 10px 0px;
+  font-size: 30px;
+
+}
+
+.info__temp {
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;
+  font-size: 30px;
+
+}
+
+.info__description {
+  margin: 10px 0px 20px 0px;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.info__forecast-button{
+  color: #fff;
+  background-color: blue;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.info__forecast{
+  text-align: center;
+  font-size: 25px;
+  margin: 10px 0px;
+  
+}
+
+.info__forecast-item{
+  display: flex;
+  align-items: center;
+  
+}
+
+
+.info__dayWeek {
+  margin: 0px 30px 0px 0px;
+  
+}
